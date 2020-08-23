@@ -315,7 +315,7 @@ public final class BitUtils {
 	 * @return an long
 	 */
 	public long getNextLong(final int pLength) {
-		return getNextLong(pLength, false);
+		return getNextLong(pLength, true);
 	}
 
 	public long getNextLong(final int pLength, final boolean bigEndian) {
@@ -366,6 +366,7 @@ public final class BitUtils {
 	 *            the length of the data to read in bit
 	 * @return an integer
 	 */
+	public int getNextInteger(final int pLength, boolean bigEndian) { return (int) (getNextLong(pLength)); }
 	public int getNextInteger(final int pLength) {
 		return (int) (getNextLong(pLength));
 	}
