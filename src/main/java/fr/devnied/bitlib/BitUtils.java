@@ -315,6 +315,10 @@ public final class BitUtils {
 	 * @return an long
 	 */
 	public long getNextLong(final int pLength) {
+		return getNextLong(pLength, false);
+	}
+
+	public long getNextLong(final int pLength, final boolean bigEndian) {
 		// allocate Size of Integer
 		ByteBuffer buffer = ByteBuffer.allocate(BYTE_SIZE * 2);
 		// final value
@@ -328,7 +332,12 @@ public final class BitUtils {
 		while (currentBitIndex < max) {
 			int mod = currentBitIndex % BYTE_SIZE;
 			// apply the mask to the selected byte
-			currentValue = byteTab[currentBitIndex / BYTE_SIZE] & getMask(mod, readSize) & DEFAULT_VALUE;
+			if (bigEndian) {
+				currentValue = byteTab[currentBitIndex / BYTE_SIZE] & getMask(mod, readSize) & DEFAULT_VALUE;
+			}
+			else{
+				currentValue = byteTab[pLength / BYTE_SIZE - (max - currentBitIndex) / BYTE_SIZE] & getMask(mod, readSize) & DEFAULT_VALUE;
+			}
 			// Shift right the read value
 			int dec = Math.max(BYTE_SIZE - (mod + readSize), 0);
 			currentValue = (currentValue & DEFAULT_VALUE) >>> dec & DEFAULT_VALUE;

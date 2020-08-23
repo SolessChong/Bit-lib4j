@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.devnied</groupId>
+	<groupId>com.github.SolessChong</groupId>
 	<artifactId>bit-lib4j</artifactId>
 	<packaging>jar</packaging>
-	<version>1.5.3-SNAPSHOT</version>
+	<version>1.5.4-SNAPSHOT</version>
 	<name>bit-lib4j</name>
 
 	<parent>
@@ -18,12 +18,12 @@
 	 Read and write data in a byte array with a custom size for Java types
 	</description>
 
-	<url>https://github.com/devnied/Bit-lib4j/</url>
+	<url>https://github.com/SolessChong/Bit-lib4j/</url>
 	<developers>
 		<developer>
-			<name>MILLAU Julien</name>
-			<id>devnied</id>
-			<email>mxjulien@gmail.com</email>
+			<name>SolessChong</name>
+			<id>SolessChong</id>
+			<email>solesschong@gmail.com</email>
 			<roles>
 				<role>Java Developer</role>
 			</roles>
@@ -38,9 +38,9 @@
   	</licenses>
 
 	<scm>
-    	<connection>scm:git:git@github.com:devnied/Bit-lib4j.git</connection>
-    	<developerConnection>scm:git:git@github.com:devnied/Bit-lib4j.git</developerConnection>
-    	<url>scm:git:git@github.com:devnied/Bit-lib4j.git</url>
+    	<connection>scm:git:git@github.com:SolessChong/Bit-lib4j.git</connection>
+    	<developerConnection>scm:git:git@github.com:SolessChong/Bit-lib4j.git</developerConnection>
+    	<url>scm:git:git@github.com:SolessChong/Bit-lib4j.git</url>
 	    <tag>HEAD</tag>
   </scm>
 
